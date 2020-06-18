@@ -1,0 +1,24 @@
+<table class="table table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Card Number</th>
+        <th scope="col">Card Type</th>
+        <th scope="col">Action</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of listUser"
+        >
+        <td>{{ user.id }}</td>
+        <td><a routerLink="/" (click)="navigateToUser(user.id)">{{ user.name }}</a></td>
+        <td>{{ user.cardNumber }}</td>
+        <td>{{ user.cardType }}</td>
+        <td>
+          <button (click)="deleteUser(user.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

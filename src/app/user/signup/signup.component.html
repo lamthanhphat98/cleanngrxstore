@@ -1,0 +1,15 @@
+<form method="POST" (ngSubmit)="saveData()">    
+    <div class="form-group">
+        <label >Name</label>
+        <input id="my-input" class="form-control" type="text" name="name" [(ngModel)]="this.userData.name">
+    </div>
+    <div class="form-group">
+        <label >Card Name</label>
+        <input id="my-input" class="form-control" type="text" name="cardNumber" [(ngModel)]="this.userData.cardNumber">
+    </div>
+    <div class="form-group">
+        <label >Card Type</label>
+        <input id="my-input" class="form-control" type="text" name="cardType" [(ngModel)]="this.userData.cardType">
+    </div>
+    <button type="submit">Save</button>
+</form>
